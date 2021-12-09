@@ -103,6 +103,9 @@
     .ads__heading-large {
         line-height: 50px;
     }
+    .ads__section-item-heading {
+        font-size: 3.3rem;
+    }
     .section__heading {
         line-height: 40px;
     }
@@ -115,6 +118,9 @@
     .package__content,
     .footer__section {
         padding: 0 50px;
+    }
+    .ads__section-content {
+        padding: 50px;
     }
     .ads__heading,
     .ads__heading-large {
@@ -150,6 +156,10 @@
     .price__package {
         font-size: 2rem;
     }
+    .item-desc__btn {
+        width: 100%;
+        text-align: center;
+    }
     .price-before-sale {
         font-size: 1.6rem;
     }
@@ -158,5 +168,34 @@
     }
     .sidebar__wrap::-webkit-scrollbar {
         width: 5px;
+    }
+    .footer__section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .footer__content {
+        margin-bottom: 20px;
+    }
+    .footer__contact {
+        flex-direction: column;
+    }
+    .footer__contact-input,
+    .footer__contact-submit {
+        width: 100%;
+    }
+    .footer__contact-submit {
+        margin-top: 15px;
+    }
+}
+
+
+/* Mobile low resolution */
+
+@media (max-width: 375px) {
+    .search-tool__select {
+        font-size: 1.3rem;
+    }
+    .search-tool__link-icon {
+        font-size: 1.4rem;
     }
 }
