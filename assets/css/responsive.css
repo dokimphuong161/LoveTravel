@@ -1,0 +1,162 @@
+/* > PC low resolution */
+
+@media (min-width: 1025px) and (max-width:1299px) {
+    .hide-on-pc-low {
+        display: none;
+    }
+}
+
+
+/* Mobile & tablet */
+
+@media (max-width:1024px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .navbar__menu {
+        text-align: center;
+        margin-top: 12px;
+    }
+    .navbar__link {
+        justify-content: center;
+    }
+    .header__search {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .search-tool,
+    .search-tool__select {
+        width: 100%;
+    }
+    .search-activity {
+        flex-direction: column;
+    }
+    .search-activity,
+    .search-activity__item {
+        width: 100%;
+    }
+    .search-activity__item:not(:first-child) {
+        margin: 30px 0 0 0;
+    }
+    .ads__btn {
+        margin-top: 20px;
+    }
+    .beaches__slider-content {
+        margin-top: 60px;
+    }
+    .beaches__countdown {
+        width: 100%;
+        left: 0;
+    }
+    .tour__section {
+        margin-top: 100px;
+    }
+    .tour__section-item {
+        margin-top: 30px;
+    }
+    .package__item {
+        margin-bottom: 30px;
+    }
+    .footer__top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__contact {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer__contact-input {
+        width: 70%;
+    }
+    .footer__contact-submit {
+        width: 27%;
+    }
+    .footer__source {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sidebar__content-wrap {
+        display: none;
+    }
+    .sidebar__menu-wrap {
+        display: block;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .header__search {
+        padding-left: 57px;
+        padding-right: 57px;
+    }
+    .search-heading__title,
+    .ads__heading,
+    .ads__heading-large {
+        line-height: 50px;
+    }
+    .section__heading {
+        line-height: 40px;
+    }
+    .search-heading__sub-title {
+        line-height: 2rem;
+    }
+    .destination__section,
+    .beaches__section,
+    .tour__section,
+    .package__content,
+    .footer__section {
+        padding: 0 50px;
+    }
+    .ads__heading,
+    .ads__heading-large {
+        margin: 0;
+    }
+    .ads__btn {
+        margin-top: 40px;
+    }
+    .slider-list__item {
+        height: 250px;
+    }
+    .countdown__item-wrap {
+        padding: 15px 0;
+    }
+    .countdown__item-qty {
+        font-size: 1.8rem;
+    }
+    .countdown__item-unit {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .countdown__item-wrap:not(:last-child)::after {
+        font-size: 30px;
+        right: -8px;
+    }
+    .tour__section {
+        margin-top: 50px;
+    }
+    .package__item-price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price__package {
+        font-size: 2rem;
+    }
+    .price-before-sale {
+        font-size: 1.6rem;
+    }
+    .sidebar__wrap {
+        width: 100%;
+    }
+    .sidebar__wrap::-webkit-scrollbar {
+        width: 5px;
+    }
+}

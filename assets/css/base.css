@@ -1,0 +1,180 @@
+/* ========== COMMON INGREDIENTS ==========
+
++ Theme name: Love Travel
++ Theme description: HTML, CSS, JS
++ Author: Do Kim Phuong
++ Version: 1.0
+
+---------- Table of Content ----------
+1.
+2.
+3.
+4.
+5.
+*/
+
+
+/*===== BASE =====*/
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/*===== VARIABLES =====*/
+
+:root {
+    --primary-color: #14b9d5;
+    --purple-color: #ba71da;
+    --green-color: #1bbc9b;
+    --red-color: #f76570;
+    --yellow-color: #ffd205;
+    --yellow-color-light: #ffd105;
+    --white-color: #fff;
+    --grey-color-bold: #c2b8b8d2;
+    --grey-color: #b1acac;
+    --grey-color-light: #f9f9f9;
+    --black-color: #000;
+    --text-color: #9a9a9a;
+    --text-color-bold: #555555;
+    --title-color: rgb(29, 17, 17);
+    --border-color: #f1f1f1;
+    --header-height: 6.4rem;
+}
+
+
+/*===== ANIMATIONS =====*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*===== BUTTONS =====*/
+
+.btn {
+    border-radius: 5rem;
+}
+
+.btn--white {
+    background-color: var(--white-color);
+}
+
+.btn--green {
+    background-color: var(--green-color);
+}
+
+.btn--purple {
+    background-color: var(--purple-color);
+}
+
+.btn--yellow {
+    background-color: var(--yellow-color);
+}
+
+.btn--red {
+    background-color: var(--red-color);
+}
+
+.link--white {
+    color: var(--white-color);
+}
+
+.link--red {
+    color: var(--red-color);
+}
+
+.link--green {
+    color: var(--green-color);
+}
+
+.link--blue {
+    color: var(--primary-color);
+}
+
+
+/*===== HEADING UNDERLINE  =====*/
+
+.heading--underline u {
+    position: relative;
+    z-index: 9;
+    text-decoration: none;
+}
+
+.heading--underline u::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    z-index: -9;
+    left: 0;
+    bottom: 11px;
+}
+
+.heading--underline.purple--underline u::after {
+    background-color: var(--purple-color);
+}
+
+.heading--underline.green--underline u::after {
+    background-color: var(--green-color);
+}
+
+.heading--underline.red--underline u::after {
+    background-color: var(--red-color);
+}
+
+.heading--underline.blue--underline u::after {
+    background-color: var(--primary-color);
+}
+
+.heading--underline.yellow--underline u::after {
+    background-color: var(--yellow-color-light);
+}
+
+
+/*===== LINE SEPARATE  =====*/
+
+.line__seperate {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+
+/*===== LINEAR GRADIENT COLOR  =====*/
+
+.yellow-orange--color {
+    background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);
+}
+
+.red-pink--color {
+    background: linear-gradient(to right, #f76570 0%, #f78d65 100%)
+}
+
+.purple-red--color {
+    background: linear-gradient(to right, #ba71da 0%, #da717b 100%)
+}
+
+.green-light--color {
+    background: linear-gradient(to right, #1bbc9b 0%, #1bbc63 100%);
+}
+
+.orange-light--color {
+    background: linear-gradient(to right, #f3a46b 0%, #f3c96b 100%);
+}
+
+.blue-green--color {
+    background: linear-gradient(to right, #14b9d5 0%, #14d5b1 100%);
+}
