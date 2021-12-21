@@ -25,6 +25,12 @@ html {
     line-height: 1.4rem;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 
@@ -37,6 +43,7 @@ html {
     --red-color: #f76570;
     --yellow-color: #ffd205;
     --yellow-color-light: #ffd105;
+    --orange-color: #f3a46b;
     --white-color: #fff;
     --grey-color-bold: #c2b8b8d2;
     --grey-color: #b1acac;
@@ -50,15 +57,59 @@ html {
 }
 
 
-/*===== ANIMATIONS =====*/
+/*===== BORDER RADIUS =====*/
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.border-radius--30 {
+    border-radius: 3rem;
+}
+
+.border-radius--50 {
+    border-radius: 5rem;
+}
+
+
+/*===== TEXT =====*/
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+.text--capitalize {
+    text-transform: capitalize;
+}
+
+.l-spacing--1 {
+    letter-spacing: 1px;
+}
+
+.l-spacing--2 {
+    letter-spacing: 2px;
+}
+
+.l-spacing--3 {
+    letter-spacing: 3px;
+}
+
+.text-desc-detail {
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    letter-spacing: 1px;
+}
+
+.text--color {
+    color: var(--text-color);
+}
+
+.text--color-bold {
+    color: var(--text-color-bold);
+}
+
+
+/*===== LINKS =====*/
+
+.link {
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 
@@ -68,40 +119,74 @@ html {
     border-radius: 5rem;
 }
 
-.btn--white {
+.btn--outline {
+    border: var(--grey-color) solid 1px;
+}
+
+.btn--white,
+.bg--white {
     background-color: var(--white-color);
 }
 
-.btn--green {
+.btn--green,
+.bg--green {
     background-color: var(--green-color);
 }
 
-.btn--purple {
+.btn--purple,
+.br--purple {
     background-color: var(--purple-color);
 }
 
-.btn--yellow {
+.btn--yellow,
+.bg--yellow {
     background-color: var(--yellow-color);
 }
 
-.btn--red {
+.btn--red,
+.bg--red {
     background-color: var(--red-color);
 }
 
-.link--white {
-    color: var(--white-color);
+.btn--blue,
+.bg--blue {
+    background-color: var(--primary-color);
 }
 
-.link--red {
-    color: var(--red-color);
+.btn--orange,
+.bg--orange {
+    background-color: var(--orange-color);
 }
 
-.link--green {
-    color: var(--green-color);
+.btn--10-15 {
+    padding: 10px 15px;
 }
 
-.link--blue {
-    color: var(--primary-color);
+.btn--8-20 {
+    padding: 8px 20px;
+}
+
+.btn--10-20 {
+    padding: 10px 20px;
+}
+
+.btn--12-20 {
+    padding: 12px 20px;
+}
+
+.btn--12-35 {
+    padding: 12px 35px;
+}
+
+.btn--15-35 {
+    padding: 15px 35px;
+}
+
+
+/*===== BORDER  =====*/
+
+.border {
+    border: var(--border-color) solid 1px;
 }
 
 
@@ -153,6 +238,25 @@ html {
 }
 
 
+/*===== COLOR  =====*/
+
+.color--white {
+    color: var(--white-color);
+}
+
+.color--red {
+    color: var(--red-color);
+}
+
+.color--green {
+    color: var(--green-color);
+}
+
+.color--blue {
+    color: var(--primary-color);
+}
+
+
 /*===== LINEAR GRADIENT COLOR  =====*/
 
 .yellow-orange--color {
@@ -177,4 +281,16 @@ html {
 
 .blue-green--color {
     background: linear-gradient(to right, #14b9d5 0%, #14d5b1 100%);
+}
+
+
+/*===== ANIMATIONS =====*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -13,6 +13,13 @@
     .hide-on-mobile-tablet {
         display: none;
     }
+    .header__bar {
+        background-color: var(--text-color-bold);
+        padding: 20px 50px;
+    }
+    .header__banner {
+        padding: 100px 50px 50px;
+    }
     .navbar__menu {
         text-align: center;
         margin-top: 12px;
@@ -83,12 +90,36 @@
     .sidebar__menu-wrap {
         display: block;
     }
+    .contact__info-wrap .row .col:not(:last-child)>.contact__info .contact__info-item:last-child {
+        border-bottom: var(--border-color) solid 1px;
+    }
+    .introduce__item,
+    .introduce__desc-large {
+        text-align: center;
+    }
+    .introduce__desc-large {
+        padding: 0;
+    }
+    .staff__item {
+        margin-bottom: 20px;
+    }
 }
 
 
 /* Tablet */
 
-@media (min-width: 740px) and (max-width: 1023px) {}
+@media (min-width: 740px) and (max-width: 1023px) {
+    .item__row_reverse {
+        flex-direction: unset;
+    }
+    .item--reverse-on-tablet {
+        flex-direction: row-reverse;
+    }
+    .introduce__ytb iframe {
+        width: 650px;
+        height: 450px;
+    }
+}
 
 
 /* Mobile */
@@ -116,7 +147,13 @@
     .beaches__section,
     .tour__section,
     .package__content,
-    .footer__section {
+    .footer__section,
+    .products__section,
+    .news__content,
+    .contact__content,
+    .introduce__section,
+    .staff__content,
+    .place__section {
         padding: 0 50px;
     }
     .ads__section-content {
@@ -130,7 +167,7 @@
         margin-top: 40px;
     }
     .slider-list__item {
-        height: 250px;
+        height: 220px;
     }
     .countdown__item-wrap {
         padding: 15px 0;
@@ -156,7 +193,9 @@
     .price__package {
         font-size: 2rem;
     }
-    .item-desc__btn {
+    .item-desc__btn,
+    .news__item-btn,
+    .form__btn {
         width: 100%;
         text-align: center;
     }
@@ -164,7 +203,7 @@
         font-size: 1.6rem;
     }
     .sidebar__wrap {
-        width: 100%;
+        width: 75%;
     }
     .sidebar__wrap::-webkit-scrollbar {
         width: 5px;
@@ -185,6 +224,36 @@
     }
     .footer__contact-submit {
         margin-top: 15px;
+    }
+    .news__item {
+        flex-direction: column;
+    }
+    .new__item-img {
+        width: 100%;
+    }
+    .new__item-img img {
+        display: block;
+        height: 300px;
+    }
+    .contact__phone {
+        text-align: center;
+    }
+    .contact__phone-detail {
+        font-size: 3rem;
+    }
+    .introduce__video {
+        margin-top: 2rem;
+    }
+    .video__play-img {
+        width: 50px;
+    }
+    .staff__banner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .introduce__ytb iframe {
+        width: 320px;
+        height: 200px;
     }
 }
 
