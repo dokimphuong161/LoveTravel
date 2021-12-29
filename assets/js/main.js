@@ -84,7 +84,7 @@ const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`January 1 ${currentYear + 1} 00:00:00`);
+const newYearTime = new Date(`March 12 ${currentYear + 1} 00:00:00`);
 
 if (days && hours && minutes && seconds) {
     function updateCountdownTime() {
@@ -106,23 +106,6 @@ if (days && hours && minutes && seconds) {
 }
 
 setInterval(updateCountdownTime, 1000);
-
-//============= RATING STAR =============//
-const container = document.querySelector('.product__ratings');
-const stars = document.querySelectorAll('.product__rating-icon');
-
-if (container && stars) {
-    container.onclick = e => {
-        const eClass = e.target.classList;
-        console.log(eClass);
-        if (!eClass.contains('active')) {
-            stars.forEach(star => star.classList.remove('active'));
-        }
-
-        console.log(e.target.getAttribute('data-rate'));
-        eClass.add('active');
-    }
-}
 
 //============= SLIDER RANGE =============//
 const inputSlider = document.getElementById('my-range');

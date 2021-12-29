@@ -18,7 +18,7 @@
         padding: 20px 50px;
     }
     .header__banner {
-        padding: 100px 50px 50px;
+        padding: 100px 0 50px;
     }
     .navbar__menu {
         text-align: center;
@@ -268,6 +268,11 @@
     .introduce__ytb iframe {
         width: 320px;
         height: 200px;
+    }
+    .goto-top:link,
+    .goto-top:visited {
+        right: 4%;
+        bottom: 5%;
     }
 }
 
