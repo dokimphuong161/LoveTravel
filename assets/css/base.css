@@ -43,7 +43,9 @@ ul {
     --red-color: #f76570;
     --yellow-color: #ffd205;
     --yellow-color-light: #ffd105;
+    --yellow-color-thin: #eeda82;
     --orange-color: #f3a46b;
+    --beige-color: #e27557;
     --white-color: #fff;
     --grey-color-bold: #c2b8b8d2;
     --grey-color: #b1acac;
@@ -158,6 +160,15 @@ ul {
     background-color: var(--orange-color);
 }
 
+.btn--beige,
+.bg--beige {
+    background-color: var(--beige-color);
+}
+
+.btn--8-15 {
+    padding: 8px 15px;
+}
+
 .btn--10-15 {
     padding: 10px 15px;
 }
@@ -228,6 +239,10 @@ ul {
     background-color: var(--yellow-color-light);
 }
 
+.heading--underline.beige--underline u::after {
+    background-color: var(--beige-color);
+}
+
 
 /*===== LINE SEPARATE  =====*/
 
@@ -264,11 +279,11 @@ ul {
 }
 
 .red-pink--color {
-    background: linear-gradient(to right, #f76570 0%, #f78d65 100%)
+    background: linear-gradient(to right, #f76570 0%, #f78d65 100%);
 }
 
 .purple-red--color {
-    background: linear-gradient(to right, #ba71da 0%, #da717b 100%)
+    background: linear-gradient(to right, #ba71da 0%, #da717b 100%);
 }
 
 .green-light--color {
@@ -293,4 +308,49 @@ ul {
     to {
         opacity: 1;
     }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    0% {
+        transform: scale(1);
+    }
+}
+
+
+/*===== GO TO TOP =====*/
+
+.goto-top:link,
+.goto-top:visited {
+    position: fixed;
+    right: 2%;
+    bottom: 8%;
+    padding: 0.8rem 1.4rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #0aa8c4 0%, #14b9d5 100%);
+    visibility: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.show-top:link,
+.show-top:visited {
+    visibility: visible;
+    z-index: 1999;
+}
+
+.goto-top svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: var(--white-color);
+}
+
+.goto-top:hover {
+    background-color: black;
 }

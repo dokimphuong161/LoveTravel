@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Travel - Shop</title>
+    <title>Love Travel - Package</title>
     <link rel="icon" href="./assets/img/logo/lovetravel-thumbnail.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800;900&display=swap">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/datepicker.css">
 
 </head>
 
@@ -27,7 +31,7 @@
     <!-- End Go To Top -->
     <div class="main">
         <!-- Start Header -->
-        <div class="header header--shop">
+        <div class="header header--package">
             <!-- Header bar -->
             <div class="header__bar">
                 <div class="grid wide">
@@ -121,7 +125,7 @@
                                         <li class="sub__menu-item"><a href="#" class="sub__item-link">Contact 2</a></li>
                                     </ul>
                                 </li>
-                                <li class="navbar_item"><a href="#" class="btn btn--purple link color--white text--uppercase l-spacing--2 btn--8-15 btn__book">Book Now</a></li>
+                                <li class="navbar_item"><a href="#" class="btn btn--red link color--white text--uppercase l-spacing--2 btn--8-15 btn__book">Book Now</a></li>
                             </ul>
                         </nav>
                         <div class="navbar__menu col l-1 m-12 c-12">
@@ -131,12 +135,138 @@
                 </div>
             </div>
             <!-- Header search -->
-            <div class="header__banner">
-                <div class="search-heading">
-                    <h1 class="search-heading__title color--white">Shop</h1>
+            <div class="header__search-package">
+                <div class="search-heading color--white">
+                    <h2 class="search__package-title text--uppercase l-spacing--2">Our packages</h2>
+                    <h1 class="search__package-heading heading--underline beige--underline">Search your <u>Holiday</u></h1>
                 </div>
-            </div>
+                <div class="search__package-wrap">
+                    <div class="search__package">
+                        <div class="row">
+                            <div class="col l-4 m-12 c-12">
+                                <div class="search__package-item">
+                                    <div class="search__item-head">
+                                        <h2 class="search__item-title text--color-bold text--capitalize l-spacing--1">Select Your Destinations:</h2>
+                                    </div>
+                                    <div class="search__item-tool">
+                                        <select class="search__select">
+                                        <option value="0">All Destinations...</option>
+                                        <option value="1">Europe</option>
+                                        <option class="sub__option" value="0">&nbsp;&nbsp;- Italy</option>
+                                        <option value="0">&nbsp;&nbsp;- Netherlands</option>
+                                        <option value="0">Asia</option>
+                                        <option value="0">&nbsp;&nbsp;- Thailandia</option>
+                                        <option value="0">United States</option>
+                                        <option value="0">Oceania</option>
+                                    </select>
+                                        <a href="#" class="search-tool__link"><img class="search-tool__link-icon" src="./assets/img/icon-image/icon-pin-grey.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="search__package-item">
+                                    <div class="search__item-head">
+                                        <h2 class="search__item-title text--color-bold text--capitalize l-spacing--1">Select Your Date:</h2>
+                                    </div>
+                                    <div class="search__item-tool">
+                                        <input id="datepicker" class="search__select search__date" type="text" placeholder="dd-mm-yyyy">
+                                        <a href="#" class="search-tool__link"><img class="search-tool__link-icon" src="./assets/img/icon-image/icon-calendar-grey.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="search__package-item">
+                                    <div class="search__item-head">
+                                        <h2 class="search__item-title text--color-bold text--capitalize l-spacing--1">Max price:</h2>
+                                        <p class="price__value text--color-bold" id="price-value"></p>
+                                    </div>
+                                    <div class="price__range">
+                                        <input type="range" min="0" max="10000" data-divide="100" value="0" step="2" id="my-range" class="price__slider">
+                                    </div>
+                                    <div class="search__item-check">
+                                        <input type="checkbox" id="item-check" name="item-check">
+                                        <label for="item-check" class="text--color l-spacing--1">See only promotions</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__filter-wrap">
+                        <div class="search__filter">
+                            <span class="filter__btn l-spacing--2 color--white text--uppercase bg--beige"><img src="./assets/img/icon-image/icon-filter-white.png">More filters</span>
+                            <div class="filter__checkbox">
+                                <div class="row">
+                                    <div class="col l-3 m-6 c-12">
+                                        <div class="filter__checkbox-item">
+                                            <h2 class="filter__checkbox-title text--color-bold l-spacing--1">Typologies :</h2>
+                                            <div class="filter__checkbox-input">
+                                                <p class="checkbox-input"><input type="checkbox"> Relax</p>
+                                                <p class="checkbox-input"><input type="checkbox"> Cultural</p>
+                                                <p class="checkbox-input"><input type="checkbox"> Sport</p>
+                                                <p class="checkbox-input"><input type="checkbox"> History</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-3 m-6 c-12">
+                                        <div class="filter__checkbox-item">
+                                            <h2 class="filter__checkbox-title text--color-bold l-spacing--1">Durations :</h2>
+                                            <div class="filter__checkbox-input">
+                                                <p class="checkbox-input"><input type="checkbox"> 1 - 3 Days</p>
+                                                <p class="checkbox-input"><input type="checkbox"> 3 - 6 Days</p>
+                                                <p class="checkbox-input"><input type="checkbox"> 6 - 9 Days</p>
+                                                <p class="checkbox-input"><input type="checkbox"> 9 - 12 Days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-3 m-6 c-12">
+                                        <div class="filter__checkbox-item">
+                                            <h2 class="filter__checkbox-title text--color-bold l-spacing--1">Difficulty :</h2>
+                                            <div class="filter__checkbox-input">
+                                                <p class="checkbox-input"><input type="checkbox"> High</p>
+                                                <p class="checkbox-input"><input type="checkbox"> Low</p>
+                                                <p class="checkbox-input"><input type="checkbox"> Medium</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-3">
+                                        <div class="filter__checkbox-item">
+                                            <h2 class="filter__checkbox-title text--color-bold l-spacing--1">Min Age :</h2>
+                                            <div class="filter__checkbox-input">
+                                                <p class="checkbox-input"><input type="checkbox"> 10 Years</p>
+                                                <p class="checkbox-input"><input type="checkbox"> 18 years</p>
+                                                <p class="checkbox-input"><input type="checkbox"> 3 Years</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search__package-option">
+                    <ul class="package__option">
+                        <li class="package__option-item">
+                            <span>Price</span> <img class="package__option-icon" src="./assets/img/icon-image/icon-down-arrow-white.svg">
+                            <ul class="sub__option">
+                                <li class="sub__option-item">Lowest price</li>
+                                <li class="sub__option-item">Highest price</li>
+                            </ul>
+                        </li>
+                        <li class="package__option-item">
+                            <span>Name</span> <img class="package__option-icon" src="./assets/img/icon-image/icon-down-arrow-white.svg">
+                            <ul class="sub__option">
+                                <li class="sub__option-item">Desc</li>
+                                <li class="sub__option-item">Asc</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="package__option">
+                        <li class="package__option-item"><img class="option-icon" src="./assets/img/icon-image/icon-list-white-opacity.png"></li>
+                        <li class="package__option-item"> <img class="option-icon" src="./assets/img/icon-image/icon-menu-white.png"></li>
+                    </ul>
+                </div>
 
+            </div>
         </div>
         <!-- End Header -->
 
@@ -337,183 +467,193 @@
 
         <!-- Start App Container -->
         <div class="app__container">
-            <!-- Product section -->
-            <section class="products__section grid wide">
+            <!-- Package section -->
+            <section class="package__section grid wide">
                 <div class="content__section">
-                    <div class="products__content">
+                    <div class="package__content">
                         <div class="row">
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-6.jpg">
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <img class="item__img" src="./assets/img/destinations/package-1.jpg">
+                                        <a href="#" class="item__icon yellow-orange--color"><img src="./assets/img/icon-image/arch.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Bora bora</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">Berlin</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>Europe</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><span class="product__price">$1,000.00</span> – <span class="product__price">$2,000.00</span></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Select options</a>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">Cultural</h6>
+                                                <h6 class="price__title">Relax <span class="btn--yellow item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package">700 $</h1>
+                                            </div>
+                                        </div>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--yellow link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-7.jpg">
-                                        <span class="product__item-label text--uppercase color--white l-spacing--1">Sale!</span>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <span class="item__sale-tag">Sale</span>
+                                        <img class="item__img" src="./assets/img/destinations/package-6.jpg">
+                                        <a href="#" class="item__icon red-pink--color"><img src="./assets/img/icon-image/torii-gate.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Hawaii Coast</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">Hong Kong</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>Asia</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><del class="product__price product__price-before-sale">$1,000.00</del> <u class="product__price">$800.00</u></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Add to cart</a>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">History</h6>
+                                                <h6 class="price__title">Cultural <span class="btn--red item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package"><span class="price-before-sale">1000</span>500 $</h1>
+                                            </div>
+                                        </div>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--red link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-5.jpg">
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <img class="item__img" src="./assets/img/destinations/package-2.jpg">
+                                        <a href="#" class="item__icon purple-red--color"><img src="./assets/img/icon-image/golden-gate.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Jamaica</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">San Francisco</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>United States</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><span class="product__price">$1,000.00</span> – <span class="product__price">$2,000.00</span></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Select options</a>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">Sport</h6>
+                                                <h6 class="price__title">Relax <span class="btn--purple item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package">400 $</h1>
+                                            </div>
+                                        </div>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--purple link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-4.jpg">
-                                        <span class="product__item-label text--uppercase color--white l-spacing--1">Sale!</span>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <img class="item__img" src="./assets/img/destinations/package-3-1024x640.jpg">
+                                        <a href="#" class="item__icon blue-green--color"><img src="./assets/img/icon-image/buddha.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Ko Samui</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">Phuket</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>Thailandia</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><del class="product__price product__price-before-sale">$1,200.00</del> <u class="product__price">$999.00</u></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Add to cart</a>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">Relax</h6>
+                                                <h6 class="price__title">Cultural <span class="btn--blue item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package">1200 $</h1>
+                                            </div>
+                                        </div>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--blue link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-2.jpg">
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <img class="item__img" src="./assets/img/destinations/package-4-1024x640.jpg">
+                                        <a href="#" class="item__icon orange-light--color"><img src="./assets/img/icon-image/london-eye.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Le Seychelles</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">Amsterdam</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>Netherlands</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><span class="product__price">$1,000.00</span> – <span class="product__price">$2,000.00</span></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Select options</a>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">History</h6>
+                                                <h6 class="price__title">Sport <span class="btn--orange item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package">1500 $</h1>
+                                            </div>
+                                        </div>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--orange link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-8.jpg">
-                                        <span class="product__item-label text--uppercase color--white l-spacing--1">Sale!</span>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="package__item border">
+                                    <div class="package__item-img">
+                                        <img class="item__img" src="./assets/img/destinations/package-5-1024x640.jpg">
+                                        <a href="#" class="item__icon green-light--color"><img src="./assets/img/icon-image/pisa.png"></a>
                                     </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Maldives</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                    <div class="package__item-content">
+                                        <div class="package__item-heading">
+                                            <h1 class="item-heading__name">Tuscany</h1>
+                                            <p class="item-heading__location"><span class="location__icon"><img src="./assets/img/icon-image/icon-pin-grey.png"></span>Italy</p>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><del class="product__price product__price-before-sale">$900.00</del> <u class="product__price">$500.00</u></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Add to cart</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-1.jpg">
-                                    </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Phuket</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-price">
+                                            <div class="item__price-pack">
+                                                <h6 class="price__title">Sport</h6>
+                                                <h6 class="price__title">Relax <span class="btn--green item__price-qty">+ 1</span></h6>
+                                            </div>
+                                            <div class="item__price">
+                                                <h1 class="price__package"><span class="price-before-sale">950</span>730 $</h1>
+                                            </div>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><span class="product__price">$1,000.00</span> – <span class="product__price">$2,000.00</span></p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Select options</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col l-3 m-6 c-12">
-                                <div class="product__item">
-                                    <div class="product__img">
-                                        <img class="product__item-img" src="./assets/img/shop/shop-3.jpg">
-                                    </div>
-                                    <div class="product__content">
-                                        <h2 class="product__content-heading">Polynesia</h2>
-                                        <div class="product__ratings">
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
-                                            <i class="product__rating-icon fas fa-star"></i>
+                                        <div class="line__seperate"></div>
+                                        <div class="package__item-desc">
+                                            <p class="item-desc__detail text-desc-detail text--color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
+                                            <a href="#" class="btn btn--12-20 btn--green link color--white text--uppercase l-spacing--1 item-desc__btn">Details</a>
                                         </div>
-                                        <p class=" text--color l-spacing--1"><span class="product__price">$1,600.00</p>
-                                        <a href="#" class="btn--10-15 btn--outline text--color l-spacing--1 product__item-btn text--uppercase">Add to cart</a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>
         <!-- End App Container -->
-
-
         <!-- Footer -->
         <footer class="footer__section">
             <div class="grid wide">
@@ -595,6 +735,14 @@
         <!-- End Footer -->
 
     </div>
+    <script>
+        $(function() {
+            $('#datepicker').datepicker({
+                dateFormat: 'dd-mm-yy'
+            });
+
+        });
+    </script>
     <script src="./assets/js/main.js"></script>
 </body>
 

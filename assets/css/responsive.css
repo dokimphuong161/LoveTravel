@@ -71,14 +71,12 @@
     .footer__contact {
         width: 100%;
         margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
     }
     .footer__contact-input {
         width: 70%;
     }
     .footer__contact-submit {
-        width: 27%;
+        width: 25%;
     }
     .footer__source {
         flex-direction: column;
@@ -103,6 +101,18 @@
     .staff__item {
         margin-bottom: 20px;
     }
+    .header__search-package {
+        padding: 70px 0;
+    }
+    .search__filter {
+        width: 90%;
+    }
+    .search__package-option {
+        display: none;
+    }
+    .header__search-package {
+        padding-bottom: 0;
+    }
 }
 
 
@@ -118,6 +128,9 @@
     .introduce__ytb iframe {
         width: 650px;
         height: 450px;
+    }
+    .search-heading {
+        padding: 0 30px;
     }
 }
 
@@ -153,7 +166,8 @@
     .contact__content,
     .introduce__section,
     .staff__content,
-    .place__section {
+    .place__section,
+    .search-heading {
         padding: 0 50px;
     }
     .ads__section-content {

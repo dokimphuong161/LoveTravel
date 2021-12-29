@@ -76,3 +76,83 @@ if (playBtn && introduceOverlay && introduceYtb) {
     }
     introduceOverlay.addEventListener('click', closeVideo);
 }
+
+//============= COUNTDOWN TIMER =============//
+const days = document.getElementById('days');
+const hours = document.getElementById('hours');
+const minutes = document.getElementById('minutes');
+const seconds = document.getElementById('seconds');
+const currentYear = new Date().getFullYear();
+
+const newYearTime = new Date(`January 1 ${currentYear + 1} 00:00:00`);
+
+if (days && hours && minutes && seconds) {
+    function updateCountdownTime() {
+        const currentTime = new Date();
+        const diff = newYearTime - currentTime;
+
+        const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+        const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+        const m = Math.floor(diff / 1000 / 60) % 60;
+        const s = Math.floor(diff / 1000) % 60;
+
+        days.innerHTML = d;
+        hours.innerHTML = h < 10 ? '0' + h : h;
+        minutes.innerHTML = m < 10 ? '0' + m : m;
+        seconds.innerHTML = s < 10 ? '0' + s : s;
+
+    }
+
+}
+
+setInterval(updateCountdownTime, 1000);
+
+//============= RATING STAR =============//
+const container = document.querySelector('.product__ratings');
+const stars = document.querySelectorAll('.product__rating-icon');
+
+if (container && stars) {
+    container.onclick = e => {
+        const eClass = e.target.classList;
+        console.log(eClass);
+        if (!eClass.contains('active')) {
+            stars.forEach(star => star.classList.remove('active'));
+        }
+
+        console.log(e.target.getAttribute('data-rate'));
+        eClass.add('active');
+    }
+}
+
+//============= SLIDER RANGE =============//
+const inputSlider = document.getElementById('my-range');
+const priceValue = document.getElementById('price-value');
+
+
+if (inputSlider && priceValue) {
+    priceValue.innerHTML = inputSlider.value + ' $';
+    inputSlider.oninput = function() {
+        priceValue.innerHTML = this.value + ' $';
+    }
+
+    inputSlider.addEventListener('mousemove', function() {
+        const dataDivide = inputSlider.getAttribute('data-divide');
+        var sliderValue = inputSlider.value / dataDivide;
+        var color = `linear-gradient(90deg, rgb(20, 185, 213) ${sliderValue}%, rgb(228, 228, 228) ${sliderValue}%)`;
+        console.log(color);
+        inputSlider.style.background = color;
+    })
+
+}
+
+//============= SCROLL TO TOP =============//
+const scrollTop = document.getElementById('scroll-top');
+if (scrollTop) {
+    function scrollTop() {
+        const scrollTop = document.getElementById('scroll-top');
+        // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+        if (this.scrollY >= 560) scrollTop.classList.add('show-top');
+        else scrollTop.classList.remove('show-top')
+    }
+    window.addEventListener('scroll', scrollTop);
+}

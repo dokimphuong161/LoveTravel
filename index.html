@@ -18,6 +18,13 @@
 </head>
 
 <body>
+    <!-- Start Go To Top -->
+    <a href="#" id="scroll-top" class="goto-top scroll__top">
+        <svg class="scrolltop__icon">
+                    <use xlink:href="./assets/img/icon-image/sprite.svg#icon-arrow-up"></use>
+                </svg>
+    </a>
+    <!-- End Go To Top -->
     <div class="main">
         <!-- Start Header -->
         <div class="header header--home">
@@ -32,7 +39,7 @@
                             <ul class="navbar__list hide-on-mobile-tablet hide-on-pc-low">
                                 <li class="navbar__item"><a href="./index.html" class="item__link">Home</a></li>
                                 <li class="navbar__item">
-                                    <a href="#" class="item__link">Packages</a>
+                                    <a href="./package.html" class="item__link">Packages</a>
                                     <ul class="sub__menu">
                                         <li class="sub__menu-item sub__menu--hot-label"><a href="#" class=" sub__item-link">Search 1</a></li>
                                         <li class="sub__menu-item"><a href="#" class="sub__item-link">Search 2</a></li>
@@ -114,7 +121,7 @@
                                         <li class="sub__menu-item"><a href="#" class="sub__item-link">Contact 2</a></li>
                                     </ul>
                                 </li>
-                                <li class="navbar_item"><a href="#" class="btn btn--purple link color--white text--uppercase l-spacing--2 btn--10-15 btn__book">Book Now</a></li>
+                                <li class="navbar_item"><a href="#" class="btn btn--purple link color--white text--uppercase l-spacing--2 btn--8-15 btn__book">Book Now</a></li>
                             </ul>
                         </nav>
                         <div class="navbar__menu col l-1 m-12 c-12">
@@ -270,7 +277,7 @@
                         <ul class="sidebar__menu-list">
                             <li class="sidebar__menu-item"><a href="./index.html" class="sidebar__menu-link">Home</a></li>
                             <li class="sidebar__menu-item">
-                                <a href="#" class="sidebar__menu-link">Packages</a>
+                                <a href="./package.html" class="sidebar__menu-link">Packages</a>
                                 <ul class="sidebar__submenu-list">
                                     <li class="submenu__item"><a href="#" class="submenu__link">Search 1</a></li>
                                     <li class="submenu__item"><a href="#" class="submenu__link">Search 2</a></li>
@@ -564,25 +571,25 @@
                                 <div class="beaches__countdown">
                                     <div class="countdown__item-wrap">
                                         <div class="countdown__item">
-                                            <h1 class="countdown__item-qty">000</h1>
+                                            <h1 id="days" class="countdown__item-qty"></h1>
                                             <h6 class="countdown__item-unit">days</h6>
                                         </div>
                                     </div>
                                     <div class="countdown__item-wrap">
                                         <div class="countdown__item">
-                                            <h1 class="countdown__item-qty">00</h1>
+                                            <h1 id="hours" class="countdown__item-qty"></h1>
                                             <h6 class="countdown__item-unit">hours</h6>
                                         </div>
                                     </div>
                                     <div class="countdown__item-wrap">
                                         <div class="countdown__item">
-                                            <h1 class="countdown__item-qty">00</h1>
+                                            <h1 id="minutes" class="countdown__item-qty"></h1>
                                             <h6 class="countdown__item-unit">minutes</h6>
                                         </div>
                                     </div>
                                     <div class="countdown__item-wrap">
                                         <div class="countdown__item">
-                                            <h1 class="countdown__item-qty">00</h1>
+                                            <h1 id="seconds" class="countdown__item-qty"></h1>
                                             <h6 class="countdown__item-unit">seconds</h6>
                                         </div>
                                     </div>
