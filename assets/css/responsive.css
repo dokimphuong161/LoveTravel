@@ -113,6 +113,9 @@
     .header__search-package {
         padding-bottom: 0;
     }
+    .search-heading {
+        padding: 0 30px;
+    }
 }
 
 
@@ -128,9 +131,6 @@
     .introduce__ytb iframe {
         width: 650px;
         height: 450px;
-    }
-    .search-heading {
-        padding: 0 30px;
     }
 }
 
