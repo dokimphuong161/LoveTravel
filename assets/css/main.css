@@ -111,6 +111,10 @@
     padding: 20px 15px;
 }
 
+.item__link.active {
+    font-weight: bolder;
+}
+
 .navbar__list .btn__book {
     margin-left: 25px;
 }
@@ -443,6 +447,10 @@
 .sidebar__menu-link {
     font-size: 2.4rem;
     font-weight: bold;
+}
+
+.sidebar__menu-link.active {
+    text-shadow: 0 0 8px var(--primary-color);
 }
 
 .sidebar__submenu-list {

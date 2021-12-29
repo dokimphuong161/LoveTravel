@@ -1,3 +1,25 @@
+//============= ACTIVE LINK NAVBAR =============//
+const currentLocation = location.href;
+const navbarItem = document.querySelectorAll('.item__link');
+if (navbarItem) {
+    for (var index in navbarItem) {
+        if (navbarItem[index].href === currentLocation) {
+            navbarItem[index].classList.add('active');
+        }
+    }
+}
+
+//============= ACTIVE LINK SIDEBAR =============//
+const sidebarItem = document.querySelectorAll('.sidebar__menu-link');
+console.log(sidebarItem);
+if (sidebarItem) {
+    for (var index in sidebarItem) {
+        if (sidebarItem[index].href === currentLocation) {
+            sidebarItem[index].classList.add('active');
+        }
+    }
+}
+
 //============= SHOW SIDEBAR =============//
 //Open sidebar
 const menuToggle = document.querySelector('.img__menu');
